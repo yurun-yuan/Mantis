@@ -1,3 +1,5 @@
+Used for replicating VideoScore
+---
 # Mantis: Multi-Image Instruction Tuning
 
 ![Mantis](./docs/assets/images/radar_chart.png)
