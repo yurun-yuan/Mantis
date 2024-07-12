@@ -115,7 +115,7 @@ if [ -z $RANK ]; then
 fi
 
 
-NGPU_PER_NODE=$(nvidia-smi --query-gpu=index --format=csv,noheader | grep -c "$(echo $CUDA_VISIBLE_DEVICES | tr ',' '\n')")
+NGPU_PER_NODE=$(nvidia-smi --query-gpu=uuid --format=csv,noheader | grep -c "$(echo $CUDA_VISIBLE_DEVICES | tr ',' '\n')")
 GPU=$((${COUNT_NODE} * ${NGPU_PER_NODE}))
 WORKERS=$((${COUNT_NODE} * ${NGPU_PER_NODE} * 4))
 
