@@ -48,7 +48,8 @@ global_batch_size=64
 problem_type="regression"
 num_labels=5
 
-RUN_NAME="mantis-8b-idefics2-video-eval-refined-40k-sora"
+# RUN_NAME="mantis-8b-idefics2-video-eval-refined-40k-sora"
+RUN_NAME="mantis-8b-idefics2-video-eval-sora"
 export WANDB_PROJECT="Mantis"
 if [ $lora_enabled = true ]; then
     echo "lora is enabled"

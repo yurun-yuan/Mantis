@@ -1,3 +1,7 @@
+# required env var
+# - hf_hub_user_name
+# - HF_TOKEN
+
 nvidia-smi
 nvcc --version
 
@@ -38,14 +42,14 @@ if [ -z $HF_TOKEN ]; then
     exit 1
 fi
 
-hf_hub_user_name="Mantis-VL" # set this will push the model to your hub after training
+# hf_hub_user_name="Mantis-VL" # set this will push the model to your hub after training
 max_seq_len=4096
 lora_enabled=false
 qlora_enabled=false
 OUTPUT_DIR="../../checkpoints"
 global_batch_size=64
 problem_type="regression"
-num_labels=7
+num_labels=5
 
 RUN_NAME="mantis-8b-idefics2-video-eval-debug"
 export WANDB_PROJECT="Mantis"
