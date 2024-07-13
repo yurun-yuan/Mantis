@@ -3,7 +3,7 @@ import dataclasses
 from dataclasses import dataclass, field
 import torch
 import os
-# import wandb
+import wandb
 import regex as re
 from transformers import Trainer, TrainingArguments, BitsAndBytesConfig
 from transformers.hf_argparser import HfArgumentParser
@@ -21,8 +21,11 @@ from pathlib import Path
 from typing import Optional
 from pathlib import Path
 
-# os.environ["WANDB_RESUME"] = "allow"
-# os.environ["WANDB_RUN_ID"] = wandb.util.generate_id()
+wandb_token_key = os.environ["WANDB_TOKEN"]
+wandb.login(key=wandb_token_key)
+
+os.environ["WANDB_RESUME"] = "allow"
+os.environ["WANDB_RUN_ID"] = wandb.util.generate_id()
 os.environ["TOKENIZERS_PARALLELISM"] = "false"
 
 # The flag below controls whether to allow TF32 on matmul. This flag defaults to False
