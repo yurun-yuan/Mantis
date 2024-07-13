@@ -45,8 +45,8 @@ fi
 
 # hf_hub_user_name="Mantis-VL" # set this will push the model to your hub after training
 max_seq_len=4096
-lora_enabled=false
-qlora_enabled=false
+lora_enabled=true
+qlora_enabled=true
 OUTPUT_DIR="../../checkpoints"
 global_batch_size=32
 problem_type="regression"
