@@ -52,7 +52,7 @@ problem_type="regression"
 num_labels=5
 
 RUN_NAME="mantis-8b-idefics2-video-eval-debug"
-export WANDB_PROJECT="Mantis"
+# export WANDB_PROJECT="Mantis"
 if [ $lora_enabled = true ]; then
     echo "lora is enabled"
     if [ $qlora_enabled = true ]; then
@@ -81,7 +81,7 @@ fi
 resume_from_checkpoint=""
 if [ -d $resume_from_checkpoint ]; then
     echo "resume_from_checkpoint = $resume_from_checkpoint"
-    export WANDB_LAST_RUN_ID="your_last_run_id"
+    # export WANDB_LAST_RUN_ID="your_last_run_id"
 else
     echo "No checkpoint found, training from scratch"
 fi
@@ -177,7 +177,6 @@ accelerate launch --config_file=$config_file \
     --tf32 True \
     --gradient_checkpointing True \
     --dataloader_num_workers $WORKERS \
-    --report_to wandb \
     --do_train \
     --lora_enabled $lora_enabled \
     --qlora_enabled $qlora_enabled \
