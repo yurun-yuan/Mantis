@@ -13,7 +13,7 @@ setup(
     install_requires=[
         "transformers",
         "sentencepiece",
-        "torch==1.13.1",
+        "torch",
         "Pillow",
         "accelerate",
         "torchvision",
