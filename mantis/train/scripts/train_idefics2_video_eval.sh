@@ -48,7 +48,7 @@ max_seq_len=4096
 lora_enabled=false
 qlora_enabled=false
 OUTPUT_DIR="../../checkpoints"
-global_batch_size=64
+global_batch_size=32
 problem_type="regression"
 num_labels=5
 
