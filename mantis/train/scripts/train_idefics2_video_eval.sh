@@ -115,6 +115,7 @@ if [ -z $RANK ]; then
     export RANK=0
 fi
 
+echo "Available GPUs $CUDA_VISIBLE_DEVICES"
 
 NGPU_PER_NODE=$(nvidia-smi --query-gpu=uuid --format=csv,noheader | grep -c "$(echo $CUDA_VISIBLE_DEVICES | tr ',' '\n')")
 GPU=$((${COUNT_NODE} * ${NGPU_PER_NODE}))
