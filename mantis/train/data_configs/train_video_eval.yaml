@@ -2,6 +2,6 @@ data:
   - 
     name: "video_eval"
     type: json
-    path: "../../data/video_eval/train_regression.json"
-    format: classification
+    path: "../../data/video_eval/train_conv.json"
+    format: chat
     split: train

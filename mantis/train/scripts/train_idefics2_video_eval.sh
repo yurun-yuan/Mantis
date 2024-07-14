@@ -48,8 +48,8 @@ max_seq_len=4096
 lora_enabled=false
 qlora_enabled=false
 OUTPUT_DIR="../../checkpoints"
-global_batch_size=4
-problem_type="regression"
+global_batch_size=32
+problem_type="generation"
 num_labels=5
 
 RUN_NAME="mantis-8b-idefics2-video-eval-debug"
