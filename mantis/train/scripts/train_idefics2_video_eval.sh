@@ -153,7 +153,7 @@ accelerate launch --config_file=$config_file \
     --machine_rank $RANK --main_process_ip $MASTER_ADDR --main_process_port $MASTER_PORT \
     --num_machines=${COUNT_NODE} --num_processes=${GPU} \
     train_idefics2.py --model_name_or_path $model_name_or_path \
-    --use_deepspeed \
+    --deepspeed_config_file ./accelerate_configs/ds_zero3_config.json \
     --data_config_file $DATA_CONFIG_FILE \
     --problem_type $problem_type \
     --num_labels $num_labels \
